@@ -5,8 +5,13 @@ Group project for music retrieval techniques
 ## Dependencies
 
 Node 18.17 or later
+
 Python 3.8 or later
-Python Flask - pip install Flask
+
+Python Flask:
+```
+pip install Flask
+```
 
 ## Run Dev Environment
 
