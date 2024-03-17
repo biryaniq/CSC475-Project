@@ -2,7 +2,7 @@
 
 Group project for music retrieval techniques
 
-## Dependencies
+## Pre-Requisites
 
 Node 18.17 or later
 
