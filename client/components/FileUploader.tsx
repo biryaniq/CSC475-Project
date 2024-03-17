@@ -2,6 +2,8 @@
 import React, { useState, ChangeEvent, useRef } from 'react';
 import { FaCheck, FaTimes } from 'react-icons/fa';
 
+// code borrowed from here https://reactjsexample.com/a-simple-upload-component-using-next-js-and-tailwind-css/
+
 interface FileUploaderProps {
     acceptedFileTypes?: string[] | null;
     url: string;

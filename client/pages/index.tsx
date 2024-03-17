@@ -40,47 +40,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Container>
-        <h1 className="text-2xl font-bold">File Uploader</h1>
+        <h1 className="text-2xl font-bold">File Upload</h1>
         <FileUploader
           url={url}
           acceptedFileTypes={[
-            "image/png",
-            "image/jpeg",
+            "audio/wav",
           ]}
           maxFileSize={100}
           label="Max File Size: 1MB"
-          labelAlt="Accepted File Types: png, jpeg"
+          labelAlt="Accepted File Types: wav"
         />
       </Container>
-      <Container>
-        <h1 className="text-2xl font-bold">File Uploader</h1>
-        <FileUploader
-          url={url}
-          acceptedFileTypes={[
-            "image/png",
-            "image/jpeg",
-          ]}
-          allowMultiple={true}
-          maxFileSize={100}
-          label="Max File Size: 100MB (multiple)"
-          labelAlt="Accepted File Types: png, jpeg"
-        />
-      </Container>
-      <Container>
-        <h1 className="text-2xl font-bold">File Uploader</h1>
-        <FileUploader
-          url={'https://example.com'}
-          acceptedFileTypes={[
-            "image/png",
-            "image/jpeg",
-          ]}
-          allowMultiple={true}
-          maxFileSize={100}
-          label="Max File Size: 100MB (non-existent endpoint)"
-          labelAlt="Accepted File Types: png, jpeg"
-        />
-      </Container>
+
       <div>
         <button onClick={() => analyzeFileMutation()}>upload music!</button>
         <div>
