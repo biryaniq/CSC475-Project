@@ -11,6 +11,7 @@ Python 3.8 or later
 Python Flask:
 ```
 pip install Flask
+pip install -U flask-cors
 ```
 
 ## Run Dev Environment
