@@ -1,13 +1,26 @@
 import Head from "next/head";
 import { analyzeFile } from "@/utils/apiUtils";
 import { useMutation } from "react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [chordsUsed, setChordsUsed] = useState<string[] | undefined>(undefined);
+  const [file, setFile] = useState<File | null>(null);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files?.length) {
+      setFile(event.target.files[0]);
+    }
+  };
+
+  useEffect(() => {
+    if (file) {
+      analyzeFileMutation();
+    }
+  }, [file]);
 
   const { mutate: analyzeFileMutation } = useMutation(
-    async () => analyzeFile(/*File*/),
+    async () => analyzeFile(file),
     {
       onSuccess: (data: any) => {
         console.log(data);
@@ -28,7 +41,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <button onClick={() => analyzeFileMutation()}>upload music!</button>
+        <input type="file" accept=".mp3" onChange={handleFileChange} />
         <div>
           {chordsUsed && (
             <div>
