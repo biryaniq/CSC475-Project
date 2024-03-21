@@ -20,8 +20,8 @@ def analyze():
     file.save(filepath)
 
     result = subprocess.run(['docker', 'run', '-v', filepath + ':/usr/a.mp3', 'chord-rec'], capture_output=True, text=True)
-    return {'status': 'success', 'data': chordino_output_to_chord_array(result.stdout)}, 200
+    return {'status': 'success', 'chordsUsed': chordino_output_to_chord_array(result.stdout)}, 200
 
-  return {'status': 'success', 'data': []}, 400
+  return {'status': 'success', 'chordsUsed': []}, 400
 
 

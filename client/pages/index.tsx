@@ -22,9 +22,9 @@ export default function Home() {
   const { mutate: analyzeFileMutation } = useMutation(
     async () => analyzeFile(file),
     {
-      onSuccess: (data: any) => {
-        console.log(data);
-        setChordsUsed(data.chords);
+      onSuccess: (response: any) => {
+        console.log(response);
+        setChordsUsed(response.chordsUsed);
       },
       onError: (error: any) => {
         console.error(error);
