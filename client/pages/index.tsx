@@ -1,9 +1,12 @@
+"use client";
+
 import Head from "next/head";
 import { analyzeFile } from "@/utils/apiUtils";
 import { useMutation } from "react-query";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { SVGuitarChord } from "svguitar";
 import { getChordChart } from "@/lib/cordcharts";
+import ChordChartList from "@/components/ChordChartList";
 
 export default function Home() {
   const [chordsUsed, setChordsUsed] = useState<string[] | undefined>(undefined);
@@ -34,28 +37,6 @@ export default function Home() {
     }
   );
 
-  useLayoutEffect(() => {
-    console.log(chordsUsed);
-    if (!chordsUsed) return;
-
-    let index = 0;
-    for (const chord of chordsUsed) {
-      const cordchart = getChordChart(chord);
-      if (cordchart === undefined) {
-        console.log(`No chord chart found for ${chord}`);
-      }
-      console.log("chart" + index, cordchart);
-      try {
-        new SVGuitarChord("#chart" + index++)
-          .chord(cordchart)
-          .configure({ tuning: ["E", "A", "D", "G", "B", "E"] })
-          .draw();
-      } catch (e) {
-        console.error(e);
-      }
-    }
-  }, [chordsUsed]);
-
   return (
     <>
       <Head>
@@ -70,15 +51,7 @@ export default function Home() {
           {chordsUsed && (
             <div>
               <h2>Chords used:</h2>
-              <ul>
-                {chordsUsed.map((chord, index) => (
-                  <div
-                    key={index}
-                    id={"#chart" + index}
-                    style={{ maxWidth: "300px" }}
-                  ></div>
-                ))}
-              </ul>
+              <ChordChartList chordsUsed={chordsUsed} />
             </div>
           )}
           <div id="chart" style={{ maxWidth: "300px" }}></div>
