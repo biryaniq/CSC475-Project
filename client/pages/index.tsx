@@ -35,7 +35,7 @@ export default function Home() {
   );
 
   useEffect(() => {
-    const cordchart = getChordChart("G");
+    const cordchart = getChordChart("E");
     console.log(cordchart);
     new SVGuitarChord("#chart")
       .chord(cordchart)
