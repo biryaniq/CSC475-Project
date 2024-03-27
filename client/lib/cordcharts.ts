@@ -51,7 +51,8 @@ interface ChordCharts {
   [key: string]: Chord
 }
 
-const chordcharts: ChordCharts = {"A": {
+const chordcharts: ChordCharts = {
+  "A": {
     "fingers": [
       [3, 2],
       [4, 2],
@@ -97,6 +98,30 @@ const chordcharts: ChordCharts = {"A": {
       [5, 2],
       [4, 2],
       [3, 1]
+    ],
+    "barres": [
+    ]
+  },
+  "F": {
+    "fingers": [
+      [5, 3],
+      [4, 3],
+      [3, 2]
+    ],
+    "barres": [
+      {
+        "fromString": 6,
+        "toString": 1,
+        "fret": 1
+      }
+    ]
+  },
+  "G": {
+    "fingers": [
+      [6, 3],
+      [5, 2],
+      [2, 3],
+      [1, 3]
     ],
     "barres": [
     ]
