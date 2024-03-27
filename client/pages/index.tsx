@@ -2,6 +2,8 @@ import Head from "next/head";
 import { analyzeFile } from "@/utils/apiUtils";
 import { useMutation } from "react-query";
 import { useEffect, useState } from "react";
+import { SVGuitarChord } from "svguitar";
+import { getChordChart } from "@/lib/cordcharts";
 
 export default function Home() {
   const [chordsUsed, setChordsUsed] = useState<string[] | undefined>(undefined);
@@ -32,6 +34,15 @@ export default function Home() {
     }
   );
 
+  useEffect(() => {
+    const cordchart = getChordChart("D");
+    console.log(cordchart);
+    new SVGuitarChord("#chart")
+      .chord(cordchart)
+      .configure({ tuning: ["E", "A", "D", "G", "B", "E"] })
+      .draw();
+  }, []);
+
   return (
     <>
       <Head>
@@ -53,6 +64,7 @@ export default function Home() {
               </ul>
             </div>
           )}
+          <div id="chart" style={{ maxWidth: "300px" }}></div>
         </div>
       </div>
     </>
