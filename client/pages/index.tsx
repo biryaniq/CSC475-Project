@@ -2,6 +2,7 @@ import Head from "next/head";
 import { analyzeFile } from "@/utils/apiUtils";
 import { useMutation } from "react-query";
 import { useEffect, useState } from "react";
+import ChordChartList from "@/components/ChordChartList";
 
 export default function Home() {
   const [chordsUsed, setChordsUsed] = useState<string[] | undefined>(undefined);
@@ -46,13 +47,10 @@ export default function Home() {
           {chordsUsed && (
             <div>
               <h2>Chords used:</h2>
-              <ul>
-                {chordsUsed.map((chord) => (
-                  <li key={chord}>{chord}</li>
-                ))}
-              </ul>
+              <ChordChartList chordsUsed={chordsUsed} />
             </div>
           )}
+          <div id="chart" style={{ maxWidth: "300px" }}></div>
         </div>
       </div>
     </>
