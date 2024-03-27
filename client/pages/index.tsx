@@ -1,11 +1,7 @@
-"use client";
-
 import Head from "next/head";
 import { analyzeFile } from "@/utils/apiUtils";
 import { useMutation } from "react-query";
-import { useEffect, useLayoutEffect, useState } from "react";
-import { SVGuitarChord } from "svguitar";
-import { getChordChart } from "@/lib/cordcharts";
+import { useEffect, useState } from "react";
 import ChordChartList from "@/components/ChordChartList";
 
 export default function Home() {
