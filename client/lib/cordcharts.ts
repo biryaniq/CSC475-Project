@@ -61,7 +61,8 @@ const chordcharts: ChordCharts = {
       [5, 0]
     ],
     "barres": [
-    ]
+    ],
+    title: "A major"
   },
   "B": {
     "fingers": [
@@ -75,7 +76,9 @@ const chordcharts: ChordCharts = {
         "toString": 1,
         "fret": 2
       }
-    ]
+    ],
+    title: "B major"
+
   },
   "C": {
     "fingers": [
@@ -86,7 +89,9 @@ const chordcharts: ChordCharts = {
       [5, 3]
     ],
     "barres": [
-    ]
+    ],
+    title: "C major"
+
   },
   "D": {
     "fingers": [
@@ -96,7 +101,9 @@ const chordcharts: ChordCharts = {
       [4, 0]
     ],
     "barres": [
-    ]
+    ],
+    title: "D major"
+
   },
   "E": {
     "fingers": [
@@ -108,7 +115,9 @@ const chordcharts: ChordCharts = {
       [6, 0]
     ],
     "barres": [
-    ]
+    ],
+    title: "E major"
+
   },
   "F": {
     "fingers": [
@@ -122,7 +131,8 @@ const chordcharts: ChordCharts = {
         "toString": 1,
         "fret": 1
       }
-    ]
+    ],
+    title: "F major"
   },
   "G": {
     "fingers": [
@@ -134,7 +144,8 @@ const chordcharts: ChordCharts = {
       [6, 3]
     ],
     "barres": [
-    ]
+    ],
+    title: "G major"
   },
 
   // Minor Chords
@@ -147,7 +158,8 @@ const chordcharts: ChordCharts = {
       [5, 0]
     ],
     "barres": [
-    ]
+    ],
+    title: "A minor"
   },
   "Bm": {
     "fingers": [
@@ -163,7 +175,8 @@ const chordcharts: ChordCharts = {
         "toString": 1,
         "fret": 2
       }
-    ]
+    ],
+    title: "B minor"
   },
   "Cm": {
     "fingers": [
@@ -174,7 +187,8 @@ const chordcharts: ChordCharts = {
       [5, 3]
     ],
     "barres": [
-    ]
+    ],
+    title: "C minor"
   },
   "Dm": {
     "fingers": [
@@ -184,7 +198,8 @@ const chordcharts: ChordCharts = {
       [4, 0]
     ],
     "barres": [
-    ]
+    ],
+    title: "D minor"
   },
   "Em": {
     "fingers": [
@@ -210,7 +225,8 @@ const chordcharts: ChordCharts = {
         "toString": 1,
         "fret": 1
       }
-    ]
+    ],
+    title: "F minor"
   },
   "Gm": {
     "fingers": [
@@ -223,7 +239,8 @@ const chordcharts: ChordCharts = {
         "toString": 1,
         "fret": 3
       }
-    ]
+    ],
+    title: "G minor"
   }
 
 }
