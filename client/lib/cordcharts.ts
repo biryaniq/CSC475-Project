@@ -212,7 +212,8 @@ const chordcharts: ChordCharts = {
 
     ],
     "barres": [
-    ]
+    ],
+    title: "E minor"
   },
   "Fm": {
     "fingers": [

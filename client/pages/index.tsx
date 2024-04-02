@@ -17,10 +17,11 @@ export default function Home() {
   useEffect(() => {
     if (file) {
       analyzeFileMutation();
+      setChordsUsed(undefined);
     }
   }, [file]);
 
-  const { mutate: analyzeFileMutation } = useMutation(
+  const { mutate: analyzeFileMutation, isLoading } = useMutation(
     async () => analyzeFile(file),
     {
       onSuccess: (response: any) => {
@@ -44,6 +45,7 @@ export default function Home() {
       <div>
         <input type="file" accept=".mp3" onChange={handleFileChange} />
         <div>
+          {isLoading && <p>Loading...</p>}
           {chordsUsed && (
             <div>
               <h2>Chords used:</h2>
