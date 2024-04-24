@@ -243,6 +243,106 @@ const chordcharts: ChordCharts = {
     title: "G minor"
   }
 
+    // Minor accidentals Chords
+  "A#m": {
+    "fingers": [
+      [2, 2],
+      [3, 3],
+      [4, 3],
+    ],
+    "barres": [
+      "fromString" : 6,
+      "toString": 1, 
+      "fret": 1
+    ],
+    title: "A# minor (Bb minor)"
+  },
+
+// for B#m, just show Cm chord
+  
+  "B#m": {
+    "fingers": [
+      [1, 3],
+      [2, 4],
+      [3, 5],
+      [4, 5],
+      [5, 3]
+    ],
+    "barres": [
+    ],
+    title: "B# minor (C minor)"
+  },
+
+  "C#m": {
+    "fingers": [
+      [2, 5],
+      [3, 6],
+      [4, 6],
+    ],
+    "barres": [
+      "fromString" : 5,
+      "toString": 1, 
+      "fret": 4
+    ],
+    title: "C# minor (Db minor)"
+  },
+  "D#m": {
+    "fingers": [
+      [1, 2],
+      [2, 4],
+      [3, 3],
+      [4, 1]
+    ],
+    "barres": [
+    ],
+    title: "D# minor (Eb minor)"
+  },
+
+  // return Fm for E#m 
+  "E#m": {
+    "fingers": [
+      [4, 3],
+      [5, 3]
+    ],
+    "barres": [
+      {
+        "fromString": 6,
+        "toString": 1,
+        "fret": 1
+      }
+    ],
+    title: "E# minor (F minor)"
+  },
+
+  "F#m": {
+    "fingers": [ 
+      [4, 4],
+      [5, 4]
+    ],
+    "barres": [
+      "fromString": 5,
+      "toString": 1,
+      "fret": 2
+    ],
+    title: "F# minor (Gb minor)"
+  },
+
+  "G#m": {
+    "fingers": [
+      [4, 6],
+      [5, 6]
+    ],
+    "barres": [
+      {
+        "fromString": 6,
+        "toString": 1,
+        "fret": 4
+      }
+    ],
+    title: "G# minor"
+  }
+
+
 }
 
 export const getChordChart = (chord: string) => {
