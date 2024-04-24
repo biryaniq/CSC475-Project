@@ -315,12 +315,14 @@ const chordcharts: ChordCharts = {
   },
 
   "F#m": {
-    "fingers": [
-      [2, 2], 
-      [3, 2],
-      [4, 4]
+    "fingers": [ 
+      [4, 4],
+      [5, 4]
     ],
     "barres": [
+      "fromString": 5,
+      "toString": 1,
+      "fret": 2
     ],
     title: "F# minor (Gb minor)"
   },
