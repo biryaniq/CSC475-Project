@@ -246,17 +246,14 @@ const chordcharts: ChordCharts = {
     // Minor accidentals Chords
   "A#m": {
     "fingers": [
-      [1, 0],
       [2, 2],
       [3, 3],
       [4, 3],
-      [5, 0],
-      [6, 0]
     ],
     "barres": [
       "fromString" : 6,
       "toString": 1, 
-      "fret": 0
+      "fret": 1
     ],
     title: "A# minor (Bb minor)"
   },
@@ -278,14 +275,12 @@ const chordcharts: ChordCharts = {
 
   "C#m": {
     "fingers": [
-      [1, 0],
       [2, 5],
       [3, 6],
       [4, 6],
-      [5, 0]
     ],
     "barres": [
-      "fromString" : 6,
+      "fromString" : 5,
       "toString": 1, 
       "fret": 4
     ],
@@ -296,7 +291,7 @@ const chordcharts: ChordCharts = {
       [1, 2],
       [2, 4],
       [3, 3],
-      [4, 0]
+      [4, 1]
     ],
     "barres": [
     ],
